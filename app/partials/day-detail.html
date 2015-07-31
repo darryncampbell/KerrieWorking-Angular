@@ -1,0 +1,35 @@
+<script>
+function setSpinning()
+{
+$("span").addClass("glyphicon-refresh-animate");
+}
+
+function stopSpinning()
+{
+$("span").removeClass("glyphicon-refresh-animate");
+}
+</script>
+
+<div class="container-fluid">
+    <H2>{{formattedDate}}
+    
+    <button ng-click="refreshData()" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> 
+    Refresh</button>
+    </H2>
+  <div class="row">
+    <div class="col-md-6">
+      <!--Body content-->
+         
+      <ul class="days">
+        <H3>{{message}}</H3>
+        <li ng-repeat="time in freeTimes"
+            class="thumbnail day-listing">
+          {{time}}
+        </li>
+      </ul>
+
+
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <!--Body content-->
+       
+       <ul class="list-group">
+        <li class="list-group-item" ng-repeat="day in dates">
+         <a ui-sref="contacts({theDay: day})"> 
+           <span class="glyphicon glyphicon-search"></span>
+          {{weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];weekdays[day.getDay()]}}
+          {{day.getDate()}} {{months = ["January", "February", "March", "April", "May", "June", "July", "August"];months[day.getMonth()]}}
+          {{day.getFullYear()}}</a>
+        </li>
+      </ul>     
+      
+      
+    </div>
+        <div class="col-md-8"></div>
+
+  </div>
+</div>
