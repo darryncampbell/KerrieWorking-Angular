@@ -1,0 +1,17 @@
+<html>
+	<script type="text/javascript">
+		function displayunicode(e, input_id){
+			var unicode=e.keyCode? e.keyCode : e.charCode
+  	  var character = document.getElementById ( input_id ).value.substr(this.length - 1);
+ 	    var  code = character.charCodeAt();
+
+      alert(unicode + " # " + code);
+		}
+	</script>
+
+	<form>
+		<input type="tel" id="char1" size="5" maxlength="1" onkeyup="displayunicode(event, 'char1'); this.select()" />
+		<input type="tel" id="char2" size="5" maxlength="1" onkeyup="displayunicode(event, 'char2'); this.select()" />
+	</form>
+
+</html>
